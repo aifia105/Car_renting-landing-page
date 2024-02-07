@@ -1,0 +1,31 @@
+<header *ngIf="setHeader"  class=" bg-white shadow-md  fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300">
+    <div class="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between ">
+        <div class="flex justify-between items-center px-4">
+             <!--logo -->
+        <div>
+            <a href="home" class="cursor-pointer"> 
+                 <img src="assets/logo.png"  class="w-20 h-20">
+            </a>
+         </div>
+         <!--menu-->
+             <div>menu</div>
+        </div>
+        
+    </div>
+</header>
+
+<header *ngIf="!setHeader" class="bg-transparent shadow-none  fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300" >
+    <div class="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between ">
+        <div class="flex justify-between items-center px-4">
+         <!--logo -->
+        <div>
+           <a href="home" class="cursor-pointer"> 
+                <img src="assets/logo.png"  class="w-20 h-20">
+           </a>
+        </div>
+        <!--menu-->
+            <div>menu</div>
+        </div>
+     
+    </div>
+</header>
