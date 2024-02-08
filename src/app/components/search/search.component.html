@@ -1,1 +1,12 @@
-<p>search works!</p>
+<div
+  [class]="
+    activeSearch
+      ? 'bg-white rounded-none xl:h-[76px] '
+      : 'bg-white rounded-md py-6 xl:pr-4 xl:h-[90px] '
+  " class="hidden xl:block w-full relative shadow-lg">
+<div class="xl:h-full flex items-center justify-between px-6 xl:px-0"> 
+  <app-location-selection></app-location-selection>
+  <app-date-selection></app-date-selection>
+  <app-hours-selection></app-hours-selection>
+</div>
+</div>

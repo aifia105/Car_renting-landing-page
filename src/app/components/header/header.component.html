@@ -1,31 +1,72 @@
-<header *ngIf="setHeader"  class=" bg-white shadow-md  fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300">
-    <div class="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between ">
-        <div class="flex justify-between items-center px-4">
-             <!--logo -->
-        <div>
-            <a href="home" class="cursor-pointer"> 
-                 <img src="assets/logo.png"  class="w-20 h-20">
-            </a>
-         </div>
-         <!--menu-->
-             <div>menu</div>
-        </div>
-        
-    </div>
-</header>
 
-<header *ngIf="!setHeader" class="bg-transparent shadow-none  fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300" >
-    <div class="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between ">
-        <div class="flex justify-between items-center px-4">
-         <!--logo -->
-        <div>
-           <a href="home" class="cursor-pointer"> 
-                <img src="assets/logo.png"  class="w-20 h-20">
-           </a>
+@if (setHeader) {
+    <header   class=" bg-white shadow-md  fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300">
+        <div class="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between ">
+            <div class="flex justify-between items-center px-4">
+                 <!--logo -->
+            <div>
+                <a href="#" class="cursor-pointer"> 
+                     <img src="assets/logo.png"  class="w-20 h-20">
+                </a>
+             </div>
+    
+    
+    
+             <!--menu-->
+             <div (click)="openMenu()" class="cursor-pointer text-2xl xl:hidden ">
+                <span *ngIf="isMenuCollapsed" class="text-primary" >
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+                <span *ngIf="!isMenuCollapsed" class="text-primary">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </span>
+             </div> 
+            </div>
+            <!--nav-->
+            <nav [class]="isMenuCollapsed ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0 flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case' : 'max-h-0 xl:max-h-max flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case'">
+                <a routerLink="/home" fragment="hero" class="cursor-pointer hover:active"  (click)="openMenu()">Home</a>
+                <a routerLink="/home" fragment="cars" class="cursor-pointer hover:active"  (click)="openMenu()">Cars</a>
+                <a routerLink="/home" fragment="about" class="cursor-pointer hover:active"  (click)="openMenu()">About</a>
+                <a routerLink="/home" fragment="why" class="cursor-pointer hover:active" (click)="openMenu()">Why us</a>
+                <a routerLink="/home" fragment="testimonial" class="cursor-pointer hover:active" (click)="openMenu()">Testimonials</a>
+                <a routerLink="/home" fragment="contact" class="cursor-pointer hover:active" (click)="openMenu()">Contact</a>
+                <a href="" class="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" (click)="openMenu()">See all cars</a>
+                <app-search-mobile></app-search-mobile>
+             </nav>
         </div>
-        <!--menu-->
-            <div>menu</div>
+    </header>
+} @else {
+    <header  class="bg-transparent shadow-none  fixed w-full max-w-[1920px] mx-auto z-20 transition-all duration-300" >
+        <div class="xl:container mx-auto flex flex-col xl:flex-row xl:items-center xl:justify-between ">
+            <div class="flex justify-between items-center px-4">
+             <!--logo -->
+            <div>
+               <a href="home" class="cursor-pointer"> 
+                    <img src="assets/logo.png"  class="w-20 h-20">
+               </a>
+            </div>
+            <!--menu-->
+            <div (click)="openMenu()" class="cursor-pointer text-2xl xl:hidden ">
+                <span *ngIf="isMenuCollapsed" class="text-primary" >
+                    <i class="fa-solid fa-xmark"></i>
+                </span>
+                <span *ngIf="!isMenuCollapsed" class="text-primary">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </span>
+             </div>
+            </div>
+         <!--nav-->
+         <nav [class]="isMenuCollapsed ? 'max-h-max py-8 px-4 xl:py-0 xl:px-0 flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case' : 'max-h-0 xl:max-h-max flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case'">
+            <a routerLink="/home" fragment="hero" class="cursor-pointer hover:active" (click)="openMenu()" >Home</a>
+            <a routerLink="/home" fragment="cars" class="cursor-pointer hover:active" (click)="openMenu()" >Cars</a>
+            <a routerLink="/home" fragment="about" class="cursor-pointer hover:active" (click)="openMenu()" >About</a>
+            <a routerLink="/home" fragment="why" class="cursor-pointer hover:active"  (click)="openMenu()">Why us</a>
+            <a routerLink="/home" fragment="testimonial" class="cursor-pointer hover:active"  (click)="openMenu()">Testimonials</a>
+            <a routerLink="/home" fragment="contact" class="cursor-pointer hover:active"  (click)="openMenu()">Contact</a>
+            <a  class="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" (click)="openMenu()">See all cars</a>
+            <app-search-mobile></app-search-mobile>
+         </nav>
         </div>
-     
-    </div>
-</header>
+    </header>
+}
+
