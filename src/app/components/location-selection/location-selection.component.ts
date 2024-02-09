@@ -15,7 +15,7 @@ export class LocationSelectionComponent {
     'Park Road 789, United Kingdom',
     'Central Avenue 456, Canada',
   ];
-  selectedLocation : string = '';
+  selectedLocation : string = 'Select Location';
   isMenuOpen: boolean = false;
 
   toggleMenu() {

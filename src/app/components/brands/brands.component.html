@@ -1,1 +1,11 @@
-<p>brands works!</p>
+<section class="xl:pt-16 xl:h-[200px] bg-white flex flex-col justify-center">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-3 gap-6 place-items-center xl:flex xl:flex-wrap xl:gap-x-6 xl:justify-between">
+           @for (item of brands; track $index) {
+            <div>
+                <img width="60" height="60" [src]="item" alt="">
+            </div>
+           }  
+        </div>
+    </div>
+</section>

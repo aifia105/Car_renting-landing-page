@@ -27,7 +27,7 @@
     <div class="w-[400px]  shadow-lg absolute -top-56 xl:top-[70px] left-1/2 xl:left-0 z-10 transform -translate-x-1/2 xl:-translate-x-0 text-sm text-center xl:text-left  bg-white max-w-[332px] py-5 rounded-[10px]" *ngIf="isMenuOpen">
       @for (item of locations; track $index) {
       <ul>
-        <li class="cursor-pointer py-4 xl:pl-10 hover:bg-gray-50 text-[13px] uppercase" (click)="selectLocation(item)" >{{ item }}</li>
+        <li class="cursor-pointer py-4 xl:pl-10 hover:bg-gray-300 font-medium text-[13px] uppercase" (click)="selectLocation(item)" >{{ item }}</li>
       </ul>
       }
     </div>

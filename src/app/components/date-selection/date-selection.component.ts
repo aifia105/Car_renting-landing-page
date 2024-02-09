@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { CustomMaterialModule } from './custom-material.module';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-date-selection',
   standalone: true,
-  imports: [CommonModule, CustomMaterialModule],
+  imports: [CommonModule, CustomMaterialModule, FormsModule],
   templateUrl: './date-selection.component.html',
   styleUrl: './date-selection.component.scss'
 })

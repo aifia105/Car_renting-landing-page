@@ -2,11 +2,18 @@
   [class]="
     activeSearch
       ? 'bg-white rounded-none xl:h-[76px] '
-      : 'bg-white rounded-md py-6 xl:pr-4 xl:h-[90px] '
+      : 'bg-white rounded-[20px] py-6 xl:pr-4 xl:h-[90px] '
   " class="hidden xl:block w-full relative shadow-lg">
-<div class="xl:h-full flex items-center justify-between px-6 xl:px-0"> 
+<div class=" flex h-full justify-between" [class]="activeSearch ? 'mx-auto container' : ''"> 
   <app-location-selection></app-location-selection>
   <app-date-selection></app-date-selection>
   <app-hours-selection></app-hours-selection>
+  <div class="xl:h-full flex items-center px-6 xl:px-0">
+    <button [class]="
+    activeSearch
+      ? 'btn btn-sm btn-accent xl:w-[164px] '
+      : 'btn btn-sm btn-accent xl:w-[184px]'
+  " class="">search</button>
+  </div>
 </div>
 </div>
