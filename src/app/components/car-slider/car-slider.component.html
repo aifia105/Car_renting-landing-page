@@ -1,1 +1,40 @@
-<p>car-slider works!</p>
+<div class="container mx-auto w-full"> 
+    <swiper-container   speed="500" slides-per-view="3"   class="swiper-container"
+    >
+    <swiper-slide *ngFor="let car of cars" >
+        <div class="max-w-[370px] mx-auto sm:mx-0 ">
+            <img [src]="car.image" height="284" width="380">
+            <div class="flex justify-between" >
+                <div>
+                    <div class="text-[13px] text-secondary uppercase">{{car.type}}</div>
+                    <h3 class="text-lg uppercase font-bold">{{car.name}}</h3>
+                    <div class="mb-10 text-accent font-semibold uppercase">{{car.price}}/DAY</div>
+                </div>
+                <!-- stars-->
+            <div> <span class="text-primary" *ngFor="let star of getCarStars(car.stars)"><i class="fas fa-star"></i></span></div>
+            </div>
+            <!--car info-->
+           <div class="flex  gap-x-3 xl:gap-x-4 w-max mb-10">
+            <div *ngFor="let info of car.info" class="flex flex-col items-center">
+                <div class="bg-primary w-12 h-12 rounded-full flex justify-center items-center mb-2">
+                    <img [src]="info.icon" width="24" height="24" >
+                </div>
+                <div class="text-[12px] uppercase ">{{info.text}}</div>
+            </div>
+           </div>
+           <button class="btn btn-accent btn-lg">See details</button>
+        </div>
+    </swiper-slide>
+           
+    </swiper-container >
+</div>
+
+
+  
+    
+       
+          
+    
+     
+
+ 
