@@ -11,8 +11,10 @@ import { ScrollDispatcher } from '@angular/cdk/scrolling';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent  {
+  carTypes: number = 50;
+  rentalOutlets : number = 100;
+  repairPoints: number = 36;
   
-
   
 
   
