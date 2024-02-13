@@ -1,1 +1,60 @@
-<p>footer works!</p>
+<footer class="pt-20 bg-white z-20">
+    <div class="container mx-auto mb-24">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-x-5 gap-y-14"> 
+            <div class="flex flex-col flex-1 gap-y-8">
+                <a class="cursor-pointer" routerLink="/home"  fragment="hero">
+                    <img src="assets/logo.png" width="200" height="200"  alt="">
+                </a>
+                <div class="text-secondary">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                <div class="flex flex-col gap-y-4 font-semibold">
+                    <div class="flex items-center gap-x-[10px]">
+                        <span class="material-symbols-outlined">call</span>
+                        <div class="font-medium">(132) 486-897-123</div>
+                    </div>
+                    <div class="flex items-center gap-x-[10px]">
+                        <span class="material-symbols-outlined">mail</span>                          
+                        <div class="font-medium">office&#64;sportclub.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 flex flex-col xl:items-center">
+                <div>
+                    <h3 class="h3 font-bold mb-8">Company</h3>
+                    <ul class="flex flex-col gap-y-4 font-semibold">
+                        <li><a href="">New York</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="">Mobile</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">How we work</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h3 class="h3 font-bold mb-8">Wroking Hours</h3>
+                <div class="flex flex-col gap-y-4">
+                    <div class="flex gap-x-2">
+                        <div class="text-secondary">Mon-Fri:</div>
+                        <div class="font-semibold">09:00AM - 09:00PM</div>
+                    </div>
+                    <div class="flex gap-x-2">
+                        <div class="text-secondary">Sat:</div>
+                        <div class="font-semibold">09:00AM - 07:00PM</div>
+                    </div>
+                    <div class="flex gap-x-2">
+                        <div class="text-secondary">Sun:</div>
+                        <div class="font-semibold">Closed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h3 class="h3 font-bold mb-8">Newsletter</h3>
+                <div class="mb-9 text-secondary">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+                <form class="flex gap-x-2 h-14">
+                    <input class="outline-none bg-white h-[50px] border rounded-lg pl-4 focus:border-accent" type="text" placeholder="Your email !">
+                    <button type="submit" class="btn btn-sm btn-accent w-24">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <app-copyright></app-copyright>
+</footer>

@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
 export class HoursSelectionComponent {
   isMenuOpen: boolean = false;
   selectedType : string = 'Select Type';
-  types: string[] = ['Commercial car', 'Personal transportation'];
+  types: string[] = ['Personal transportation','Super car' ];
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }

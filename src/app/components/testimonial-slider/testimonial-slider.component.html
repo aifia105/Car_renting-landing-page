@@ -1,1 +1,13 @@
-<p>testimonial-slider works!</p>
+<div class="container mx-auto">
+    <swiper-container   speed="500"  pagination="true" style="--swiper-pagination-color: #f13024;" pagination-dynamic-bullets="true" class="swiper-container h-[450px] xl:h-[400px]">
+        <swiper-slide *ngFor="let user of testimonialsDemoData" >
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="text-7xl text-accent mb-6 "><i class="fa-solid fa-quote-left"></i></span>
+                <div class="text-2xl xl:text-4xl max-w-[874px] mb-12 font-medium">{{user.message}}</div>
+                <img [src]="user.avatar" height="64" width="64" class="mb-4">
+                <div class="text-lg font-medium">{{user.name}}</div>
+                <div class="text-secondary">{{user.job}}</div>
+            </div>
+        </swiper-slide>
+    </swiper-container>
+</div>
