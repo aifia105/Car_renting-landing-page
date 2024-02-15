@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, NgZone, OnInit, ViewChild, inject } from '@angular/core';
 import { CountUp, CountUpOptions } from 'countup.js';
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,12 @@ export class AboutComponent  {
   rentalOutlets : number = 100;
   repairPoints: number = 36;
   
+  private router = inject(Router);
   
+
+  navigateToCars(){
+    this.router.navigate(['/cars']);
+  }
 
   
 }

@@ -1,7 +1,7 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import {  Component, HostListener, Inject, OnInit, signal } from '@angular/core';
+import {  Component, HostListener, Inject, OnInit, inject, signal } from '@angular/core';
 import { SearchMobileComponent } from '../search-mobile/search-mobile.component';
-import { RouterLink } from '@angular/router';
+import {  RouterLink } from '@angular/router';
 
 
 @Component({
@@ -13,6 +13,7 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
  isMenuCollapsed: boolean = false;
+ isAvatarCollapsed: boolean = false;
  setHeader: boolean = false;
  number: number = 0;
 
@@ -20,11 +21,15 @@ export class HeaderComponent implements OnInit {
  constructor(@Inject(DOCUMENT) private document: Document) {}
 
 
+
+
  @HostListener('window:scroll', [])
   onWindowScroll() {
     this.number = window.scrollY || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
     this.setHeader = this.number > 40;
   }
+
+
 
  
 
@@ -36,6 +41,10 @@ export class HeaderComponent implements OnInit {
 
   openMenu() {
     this.isMenuCollapsed = !this.isMenuCollapsed;
+  }
+
+  openAvatar() {
+    this.isAvatarCollapsed = !this.isAvatarCollapsed;
   }
 
 

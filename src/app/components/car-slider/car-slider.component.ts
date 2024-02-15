@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 
@@ -14,6 +15,7 @@ import { AfterViewInit, Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Renderer2
 export class CarSliderComponent implements AfterViewInit {
   cars = [
     {
+      id:'1',
       type: 'Hatchback',
       name: 'Ford Focus',
       price: 29,
@@ -43,6 +45,7 @@ export class CarSliderComponent implements AfterViewInit {
       ]
     },
     {
+      id:'1',
       type: 'Sedan',
       name: 'Toyota Corolla',
       price: 25,
@@ -72,6 +75,7 @@ export class CarSliderComponent implements AfterViewInit {
       ]
     },
     {
+      id:'1',
       type: 'SUV',
       name: 'Honda CR-V',
       price: 35,
@@ -101,6 +105,7 @@ export class CarSliderComponent implements AfterViewInit {
       ]
     },
     {
+      id:'1',
       type: 'Convertible',
       name: 'Madza MX-5',
       price: 32,
@@ -132,6 +137,12 @@ export class CarSliderComponent implements AfterViewInit {
     
   ];
   constructor(private renderer: Renderer2, private el: ElementRef) {}
+
+  private router = inject(Router);
+
+
+
+
   ngAfterViewInit(): void {
     const swiper = this.el.nativeElement.querySelector('.swiper-container');
     if(swiper){
@@ -163,6 +174,11 @@ export class CarSliderComponent implements AfterViewInit {
   getCarStars(stars: number){
     return Array(Math.round(stars)).fill(0);
   }
+
+  navigateToCar(id: string){
+    this.router.navigate(['/car', id]);
+  }
+  
 
 
  

@@ -21,6 +21,7 @@
                     <i class="fa-solid fa-bars-staggered"></i>
                 </span>
              </div> 
+             
             </div>
             <!--nav-->
             <nav [class]="isMenuCollapsed ? 'max-h-max pb-8 px-4 xl:py-0 xl:px-0 flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case' : 'max-h-0 xl:max-h-max flex flex-col w-full bg-white gap-y-6 overflow-hidden font-bold xl:font-medium xl:flex-row xl:w-max xl:gap-x-8 xl:h-max xl:bg-transparent xl:pb-0 transition-all duration-150 text-center xl:text-left uppercase text-sm xl:text-[15px] xl:normal-case'">
@@ -30,10 +31,12 @@
                 <a routerLink="/home" fragment="why" class="cursor-pointer hover:active" (click)="openMenu()">Why us</a>
                 <a routerLink="/home" fragment="testimonial" class="cursor-pointer hover:active" (click)="openMenu()">Testimonials</a>
                 <a routerLink="/home" fragment="contact" class="cursor-pointer hover:active" (click)="openMenu()">Mobile App</a>
-                <a href="" class="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" (click)="openMenu()">See all cars</a>
+                <a routerLink="/cars" class="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" (click)="openMenu()">See all cars</a>
                 <app-search-mobile></app-search-mobile>
              </nav>
+             
         </div>
+        
     </header>
 } @else {
     <header  class="bg-transparent shadow-none  fixed w-full py-4 max-w-[1920px] mx-auto z-20 transition-all duration-300" >
@@ -42,7 +45,7 @@
              <!--logo -->
             <div>
                <a href="home" class="cursor-pointer"> 
-                    <img src="assets/logo.png"  class="w-20 h-20">
+                    <img src="assets/logo.png"  height="150" width="150">
                </a>
             </div>
             <!--menu-->
@@ -63,7 +66,7 @@
             <a routerLink="/home" fragment="why" class="cursor-pointer hover:active"  (click)="openMenu()">Why us</a>
             <a routerLink="/home" fragment="testimonial" class="cursor-pointer hover:active"  (click)="openMenu()">Testimonials</a>
             <a routerLink="/home" fragment="contact" class="cursor-pointer hover:active"  (click)="openMenu()">Mobile App</a>
-            <a  class="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" (click)="openMenu()">See all cars</a>
+            <a routerLink="/cars"  class="xl:hidden btn btn-primary btn-sm max-w-[164px] mx-auto" (click)="openMenu()">See all cars</a>
             <app-search-mobile></app-search-mobile>
          </nav>
         </div>
