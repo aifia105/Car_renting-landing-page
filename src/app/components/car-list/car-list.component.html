@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="  bg-gray-50 min-h-full">  
+   <div class="grid grid-cols-4 gap-6">
+    <!--filter-->
+    <div class="col-span-1">     
+
+        <!--add filter-->
+    </div>
+    <!-- grid-->
+    <div class="col-span-3">
+        <div class="grid grid-cols-3  container mx-auto pt-28 ">
+
+
+            <!--fix card-->
+            <div class="rounded-xl shadow-lg  w-[330px] h-[400px]" *ngFor="let car of cars">
+                <div class="p-5">
+                    <div class="rounded-xl overflow-hidden ">
+                        <img [src]="car.image" class="w-60 h-60">
+                    </div>
+                    <div class="flex justify-between" >
+                        <div>
+                            <div class="text-[13px] text-secondary uppercase">{{car.type}}</div>
+                            <h3 class="text-lg uppercase font-bold">{{car.name}}</h3>
+                            <div class="mb-6 text-accent font-semibold uppercase">{{car.price}}/DAY</div>
+                        </div>
+                        <!-- stars-->
+                    <div> <span class="text-primary" *ngFor="let star of getCarStars(car.stars)"><i class="fas fa-star"></i></span></div>
+                    </div>
+                    <button (click)="navigateToCar(car.id)" class="btn btn-accent btn-sm">See details</button>
+                </div>
+            </div>      
+        </div>
+    </div>
+   </div>
+</div>
