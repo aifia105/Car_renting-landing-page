@@ -1,27 +1,34 @@
-# CarRating
+# Car Renting Landing Page
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+A responsive web application for car renting built with Angular and Tailwind CSS.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project provides a landing page for car rental services, featuring a clean and responsive design.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone the repository and install dependencies:
 
-## Build
+```bash
+git clone https://github.com/aifia105/Car_renting-landing-page.git
+cd Car_renting-landing-page
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Development
+To start the development server:
 
-## Running unit tests
+```bash
+ng serve
+```
+You can just navigate to http://localhost:4200/ in your browser.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Build
+To build the project:
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+bash
+```bash
+ng build
+```
+The build artifacts will be stored in the dist/ directory.
